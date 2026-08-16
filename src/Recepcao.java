@@ -3,68 +3,65 @@ import java.time.LocalDate;
 
 public class Recepcao {
     //atributos
-    int menu;
     int opcaoMenu;
+    int tamanhoFila = 0;
+    Paciente [] fila = new Paciente[5];
 
-    //outros
+    //entrada de dados
     Scanner scanner = new Scanner(System.in);
 
-    Paciente [] fila = new Paciente[5];
-    int tamanhoFila = 0;
+    //métodos
 
+    public void cadastrarPaciente(){
 
-
-
-
-    //metodos
-    public void CadastrarPaciente(){
-        //cria o paciente
         Paciente paciente = new Paciente();
         System.out.println("=== CADASTRO DE PACIENTE ===");
 
-        //pede o nome
+        //Nome
         System.out.println("Digite o nome:");
         paciente.nome = scanner.next();
 
-        //pede nascismento
+        //Data de Nascismento
         System.out.println("Digite o ano, mês e dia de nascimento (yyyy mm dd):");
-        int year = scanner.nextInt();
-        int month = scanner.nextInt();
-        int day = scanner.nextInt();
-        paciente.dataNacimento = LocalDate.of(year, month, day);
+        int ano = scanner.nextInt();
+        int mes = scanner.nextInt();
+        int dia = scanner.nextInt();
+        paciente.dataNacimento = LocalDate.of(ano, mes, dia);
 
-        //pede registro
+        //Número de registro
         System.out.println("Digite o numero de registro: ");
         paciente.registro = scanner.nextInt();
 
-        //colocar o paciente pronto numa fila
+        //Adiciona Paciente à fila
         fila[tamanhoFila] = paciente;
         tamanhoFila++;
 
     }
 
-    public void ChamarPaciente(){
-        //todo: chamar o primeiro da fila (FIFO)
-        //todo: exibir O NOME
+    public void chamarPaciente(){
+        //todo: chamar o primeiro paciente da fila
+        //todo: exibir o nome do paciente
     }
 
-    public void CobrarConsulta(){
-        System.out.println("Cobrar");
+    public void cobrarConsulta(){
+        //todo: perguntar a forma do pagamento
+        //todo: pedir o valor da consulta
     }
 
-    public void AgendarConsulta(){
-        System.out.println("agendar");
+    public void agendarConsulta(){
+        //todo: selecionar o paciente
+        //todo: definir data/horário e registrar a consulta
     }
 
-    public void ExibirMenu(){
+    public void exibirMenu(){
         System.out.println("Olá! Seja Bem vindo à clinica Medicine.");
         System.out.println("Selecione uma alternativa:");
         System.out.println("0 - Sair");
-        System.out.println("1 - Chamar o proximo paciente");
-        System.out.println("2 - Cobrar Consulta");
+        System.out.println("1 - Cadastrar paciente");
+        System.out.println("2 - Chamar o próximo paciente");
         System.out.println("3 - Agendar Consulta");
+        System.out.println("4 - Cobrar Consulta");
         System.out.println();
-        //Scanner menu = new Scanner(System.in);
         opcaoMenu = scanner.nextInt();
 
     }

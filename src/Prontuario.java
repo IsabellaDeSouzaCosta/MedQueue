@@ -9,23 +9,23 @@ public class Prontuario {
 
 
 
-    //metodos
+    //métodos
     public void CadastrarProntuario(){
-        //Vai pedir todas as informações do usuário. O programa deve entrar aqui quando recepcao cadastrar paciente.
+        //Solicita os dados do paciente e realiza seu cadastro na fila
         //todo: pedir informações pessoais do paciente (nome, nascimento e registro)
-        //todo: pedir pra cadastrar endereço, alergias e medicacoes;
+        //todo: pedir pra cadastrar endereço, alergias e medicacoes
         //todo: guardar em memoria
     }
 
     public void ExibirProntuario(){
-        //Vai exibir a lista de prontuarios exibidos e selecionar um e exibir todas as informaçoes de UM prontuario
+        //Exibe a lista de prontuários, permite selecionar um e mostra suas informações
         //todo: Exibir lista de prontuarios
         //todo: Selecionar um prontuario
         //todo: Exibir informações
     }
 
     public void AtualizarProntuario(){
-        //Vai exibir a lista de prontuarios exibidos e selecionar um e atualizar UM prontuario
+        //Exibe a lista de prontuários, permite selecionar um e atualiza suas informações
         //todo: Exibir lista de prontuarios
         //todo: Selecionar um prontuario
         //todo: Exibir informações
@@ -34,7 +34,7 @@ public class Prontuario {
     }
 
     public void AdicionarObservações(){
-        //Seleciona um prontuario e adiciona um texto de informações
+        //Seleciona um prontuário e adiciona um novo texto às observações
         //todo: Selecionar prontuario
         //todo: Adicionar texto
     }
