@@ -24,8 +24,10 @@ public class Main {
                     recepcao.AgendarConsulta();
                     break;
                 case 3:
-                    recepcao.CobrarConsulta();
+                    recepcao.CadastrarPaciente();
                     break;
+                case 4:
+                    recepcao.CobrarConsulta();
                 }
 
                 if (recepcao.opcaoMenu != 0) {
