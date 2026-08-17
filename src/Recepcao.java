@@ -39,8 +39,18 @@ public class Recepcao {
     }
 
     public void chamarPaciente(){
-        //todo: chamar o primeiro paciente da fila
-        //todo: exibir o nome do paciente
+        if (tamanhoFila == 0){
+            System.out.println("Não há pacientes no momento.");
+        } else {
+
+            System.out.println("Proximo Paciente: " + fila[0].nome);
+            //Move os pacientes uma posição para a esquerda após chamar o primeiro.
+            for (int i = 0; i < (tamanhoFila - 1); i++) {
+                fila[i] = fila[i+1];
+            }
+            tamanhoFila--;
+        }
+
     }
 
     public void cobrarConsulta(){
